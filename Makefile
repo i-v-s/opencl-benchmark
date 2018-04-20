@@ -8,7 +8,7 @@ OUT_CPU=cpu
 all: clean gpu cpu
 
 gpu:
-	$(CC) $(SRC_GPU) -o $(OUT_GPU) -framework opencl
+	$(CC) $(SRC_GPU) -o $(OUT_GPU) $< -o $@ -lOpenCL
 
 cpu:
 	$(CC) $(SRC_CPU) -o $(OUT_CPU)
